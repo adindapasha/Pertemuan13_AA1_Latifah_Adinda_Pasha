@@ -1,0 +1,55 @@
+# Import modul input/output
+import sys
+
+# Definisikan fungsi untuk mencetak menu
+def menu():
+  print("Pilih Bentuk 2D")
+  print()
+  print("1. Persegi Panjang")
+  print("2. Lingkaran")
+  print("3. Segitiga")
+  print("4. Keluar")
+
+# Definisikan fungsi untuk menghitung luas persegi panjang
+def persegi():
+  print("Menghitung Luas Persegi Panjang")
+  p = float(input("Masukkan Panjang: "))
+  l = float(input("Masukkan Lebar: "))
+  luas = p * l
+  print("Luas Persegi Panjang adalah", luas)
+
+# Definisikan fungsi untuk menghitung luas lingkaran
+def lingkaran():
+  print("Menghitung Luas Lingkaran")
+  r = float(input("Masukkan Jari-Jari: "))
+  luas = 3.14 * (r ** 2)
+  print("Luas Lingkaran adalah", luas)
+
+# Definisikan fungsi untuk menghitung luas segitiga
+def segitiga():
+  print("Menghitung Luas Segitiga")
+  a = float(input("Masukkan Alas: "))
+  t = float(input("Masukkan Tinggi: "))
+  luas = (a * t) / 2
+  print("Luas Segitiga adalah", luas)
+
+# Menampilkan menu awal
+menu()
+
+# Menjalankan program secara berulang
+while True:
+  # Menerima input dari pengguna
+  pilihan = input("Pilih Bentuk 2D (1-4): ")
+
+  # Melakukan aksi sesuai pilihan pengguna
+  if pilihan == "1":
+    persegi()
+  elif pilihan == "2":
+    lingkaran()
+  elif pilihan == "3":
+    segitiga()
+  elif pilihan == "4":
+    print("Terima kasih telah menggunakan program ini!")
+    sys.exit()
+  else:
+    print("Pilihan tidak valid!")
